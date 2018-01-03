@@ -138,7 +138,7 @@ function renameNamespace()
 
     rmdir ${illuminateNamespaceDir}
 
-    find ${baseDir} -name "*.php" -exec sed -i "" -e "s|${oldNamespace}|${newNamespace}|g" {} \;
+    find ${baseDir} -name "*.php" -exec sed -i -e "s|${oldNamespace}|${newNamespace}|g" {} \;
 }
 
 function prepareEnvironment()
